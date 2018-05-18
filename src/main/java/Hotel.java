@@ -8,8 +8,16 @@ public class Hotel {
 
     }
 
+    public ArrayList<Room> getRoomList() {
+        return this.roomList;
+    }
+
     public void checkInGuests(Room room, Guest guest){
         room.addGuests(guest);
+    }
+
+    public void checkOutGuests(Room room, Guest guest){
+        room.removeGuests(guest);
     }
 
     public ArrayList<Guest> guestsInRoom(Room room){

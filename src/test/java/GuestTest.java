@@ -1,6 +1,8 @@
 import org.junit.Before;
 import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
+
 public class GuestTest {
 
     Guest guest;
@@ -11,8 +13,16 @@ public class GuestTest {
 
     }
 
-//    @Test
-//    public void canGetName(){
-//        assertEquals();
-//    }
+    @Test
+    public void canGetName(){
+        assertEquals("Davina", guest.getName());
+    }
+
+    @Test
+    public void canSetName(){
+        guest.setName("Hannah");
+        assertEquals("Hannah", guest.getName());
+    }
+
+
 }
