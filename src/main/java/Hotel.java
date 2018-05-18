@@ -8,7 +8,7 @@ public class Hotel {
 
     }
 
-    public ArrayList<Guest> checkInGuests(Room room, Guest guest){
+    public ArrayList<String> checkInGuests(Room room, Guest guest){
         room.addGuests(guest);
         return room.getGuestList();
     }

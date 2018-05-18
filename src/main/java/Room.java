@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 
+import static com.sun.tools.internal.xjc.reader.Ring.add;
+
 public abstract class Room {
     private int capacity;
     private ArrayList<Guest> guestList;
@@ -13,8 +15,12 @@ public abstract class Room {
         return this.capacity;
     }
 
-    public ArrayList<Guest> getGuestList(){
-        return this.guestList;
+    public ArrayList<String> getGuestList(){
+        ArrayList<String> guestNames = new ArrayList<>();
+        for ( Guest guest : this.guestList ) {
+            guestNames.add(guest.getName());
+        }
+        return guestNames;
     }
 
     public void addGuests(Guest guest){
