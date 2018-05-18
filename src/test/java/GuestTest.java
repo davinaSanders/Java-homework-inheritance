@@ -1,4 +1,5 @@
 import org.junit.Before;
+import org.junit.Test;
 
 public class GuestTest {
 
@@ -6,6 +7,12 @@ public class GuestTest {
 
     @Before
     public void before(){
-        guest = Guest new ();
+        this.guest = new Guest ("Davina");
+
     }
+
+//    @Test
+//    public void canGetName(){
+//        assertEquals();
+//    }
 }

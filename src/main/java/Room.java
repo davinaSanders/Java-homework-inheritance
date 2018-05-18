@@ -15,16 +15,20 @@ public abstract class Room {
         return this.capacity;
     }
 
-    public ArrayList<String> getGuestList(){
-        ArrayList<String> guestNames = new ArrayList<>();
-        for ( Guest guest : this.guestList ) {
-            guestNames.add(guest.getName());
-        }
-        return guestNames;
-    }
+//    public ArrayList<String> getGuestList(){
+//        ArrayList<String> guestNames = new ArrayList<>();
+//        for ( Guest guest : this.guestList ) {
+//            guestNames.add(guest.getName());
+//        }
+//        return guestNames;
+//    }
 
     public void addGuests(Guest guest){
         this.guestList.add(guest);
+    }
+
+    public ArrayList<Guest> getGuestList(){
+        return this.guestList;
     }
 
 //    public boolean emptyRoom

@@ -8,17 +8,25 @@ public class Hotel {
 
     }
 
-    public ArrayList<String> checkInGuests(Room room, Guest guest){
+    public void checkInGuests(Room room, Guest guest){
         room.addGuests(guest);
+    }
+
+    public ArrayList<Guest> guestsInRoom(Room room){
         return room.getGuestList();
     }
 
+    public void AddRooms(Room room){
+        this.roomList.add(room);
+    }
+
     public ArrayList<Room> emptyRooms(){
+        ArrayList<Room> vacantRooms = new ArrayList<>();
         for (Room room : this.roomList) {
-            if (!room.getGuestList().isEmpty()) {
-                this.roomList.add(room);
+            if (room.getGuestList().isEmpty()) {
+                vacantRooms.add(room);
             }
         }
-        return this.roomList;
+        return vacantRooms;
     }
 }
