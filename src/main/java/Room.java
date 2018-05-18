@@ -22,6 +22,7 @@ public abstract class Room {
 //        }
 //        return guestNames;
 //    }
+//    this code was to return an array list of strings (guest names)
 
     public void addGuests(Guest guest){
         this.guestList.add(guest);

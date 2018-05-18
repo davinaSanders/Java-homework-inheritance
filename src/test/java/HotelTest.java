@@ -7,12 +7,16 @@ public class HotelTest {
 
     Hotel hotel;
     Room room;
+    Room room1;
+    Room room2;
     Guest guest;
 
     @Before
     public void before (){
         this.hotel = new Hotel ();
         this.room = new BedRoom (2, 12, BedRoomType.SINGLE, 12.01);
+        this.room1 = new BedRoom (4, 13, BedRoomType.DOUBLE, 24.02);
+        this.room2 = new BedRoom (4, 14, BedRoomType.DOUBLE, 23.02);
         this.guest = new Guest ("Davina");
     }
 
@@ -53,9 +57,13 @@ public class HotelTest {
         assertEquals(1, hotel.getRoomList().size());
     }
 
-//    @Test
-//    public void getEmptyRooms() {
-//        hotel
-//    }
+    @Test
+    public void getEmptyRooms() {
+        hotel.AddRooms(room);
+        hotel.AddRooms(room1);
+        hotel.AddRooms(room2);
+        hotel.checkInGuests(room1, guest);
+        assertEquals(2, hotel.emptyRooms().size());
+    }
 
 }
