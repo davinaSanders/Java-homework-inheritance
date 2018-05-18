@@ -8,4 +8,14 @@ public abstract class Room {
         this.capacity = capacity;
         this.guestList = new ArrayList<>();
     }
+
+    public int getCapacity(){
+        return this.capacity;
+    }
+
+    public void addGuests(Guest guest){
+        this.guestList.add(guest);
+    }
+
+
 }
