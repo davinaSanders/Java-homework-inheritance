@@ -13,9 +13,15 @@ public abstract class Room {
         return this.capacity;
     }
 
+    public ArrayList<Guest> getGuestList(){
+        return this.guestList;
+    }
+
     public void addGuests(Guest guest){
         this.guestList.add(guest);
     }
+
+//    public boolean emptyRoom
 
 
 }

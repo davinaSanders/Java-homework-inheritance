@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public abstract class Hotel {
+public class Hotel {
     private ArrayList<Room> roomList;
 
     public Hotel(){
@@ -8,8 +8,17 @@ public abstract class Hotel {
 
     }
 
-    public void checkInGuests(Room room){
+    public ArrayList<Guest> checkInGuests(Room room, Guest guest){
+        room.addGuests(guest);
+        return room.getGuestList();
+    }
 
-
+    public ArrayList<Room> emptyRooms(){
+        for (Room room : this.roomList) {
+            if (!room.getGuestList().isEmpty()) {
+                this.roomList.add(room);
+            }
+        }
+        return this.roomList;
     }
 }
