@@ -14,9 +14,9 @@ public class HotelTest {
     @Before
     public void before (){
         this.hotel = new Hotel ();
-        this.room = new BedRoom (2, 12, BedRoomType.SINGLE, 12.01);
-        this.room1 = new BedRoom (4, 13, BedRoomType.DOUBLE, 24.02);
-        this.room2 = new BedRoom (4, 14, BedRoomType.DOUBLE, 23.02);
+        this.room = new BedRoom (2, 12,  BedRoomType.SINGLE, 12.01);
+        this.room1 = new BedRoom (4, 13,  BedRoomType.DOUBLE, 24.02);
+        this.room2 = new BedRoom (4, 14,  BedRoomType.DOUBLE, 23.02);
         this.guest = new Guest ("Davina");
     }
 

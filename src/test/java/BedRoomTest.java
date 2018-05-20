@@ -10,13 +10,18 @@ public class BedRoomTest {
 
     @Before
     public void before() {
-        this.bedroom = new BedRoom (2, 12, BedRoomType.SINGLE, 12.01);
+        this.bedroom = new BedRoom (2, 11, BedRoomType.SINGLE, 12.01);
         this.guest = new Guest ("Davina");
     }
 
     @Test
     public void canGetCapacity(){
         assertEquals(2, bedroom.getCapacityBedRoom());
+    }
+
+    @Test
+    public void canGetNights(){
+        assertEquals(0, bedroom.getNightsRoom());
     }
 
     @Test

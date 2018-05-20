@@ -14,6 +14,7 @@ public class Hotel {
 
     public void checkInGuests(Room room, Guest guest){
         room.addGuests(guest);
+
     }
 
     public void checkOutGuests(Room room, Guest guest){
@@ -28,6 +29,10 @@ public class Hotel {
         this.roomList.add(room);
     }
 
+//
+
+
+
     public ArrayList<Room> emptyRooms(){
         ArrayList<Room> vacantRooms = new ArrayList<>();
         for (Room room : this.roomList) {
@@ -37,4 +42,20 @@ public class Hotel {
         }
         return vacantRooms;
     }
+
+
+//    public void applyBooking(Booking booking) {
+//        booking.getRoom().getGuestList().add(booking.getGuest());
+//        int Nights = booking.getNights();
+//        booking.getRoom().getNightsRoom() += Nights;
+//
+//    }
+//    How can I access my getNights from the bedroom?
+
+//    public void addBooking(Booking booking, BedRoom bedroom) {
+////        booking.getRoom().getGuestList().add(booking.getGuest());
+////        bedroom.getNightsRoom() += booking.getNights();
+////    }
+//    variable expected
+
 }

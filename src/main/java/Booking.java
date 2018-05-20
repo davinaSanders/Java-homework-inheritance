@@ -3,24 +3,28 @@ public class Booking {
     private Guest guest;
     private int nights;
 
-    public Booking(Room room, Guest guest, int nights){
+    public Booking(Room room, Guest guest, int nights) {
         this.room = room;
         this.guest = guest;
         this.nights = nights;
 
     }
 
-
-    public int getnights(){
+    public int getNights() {
         return this.nights;
     }
 
 
-    public Room getroom(){
+    public Room getRoom() {
         return this.room;
     }
 
-    public Guest getguest(){
+    public Guest getGuest() {
         return this.guest;
     }
+
+
+
+
+
 }
